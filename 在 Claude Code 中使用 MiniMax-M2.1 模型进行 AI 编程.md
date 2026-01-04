@@ -4,27 +4,10 @@
 
 ## 一、安装 Claude Code
 
-### 系统要求
+使用 NPM 全局安装：
 
-- **操作系统**: macOS 10.15+、Ubuntu 20.04+/Debian 10+、Windows 10+ (需 WSL 或 Git for Windows)
-- **硬件**: 4GB+ RAM
-- **软件**: Node.js 18+ (仅 NPM 安装需要)
-
-### 安装步骤
-
-**macOS / Linux / WSL（推荐方式）：**
 ```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
-**macOS（Homebrew 方式）：**
-```bash
-brew install --cask claude-code
-```
-
-**Windows PowerShell：**
-```powershell
-irm https://claude.ai/install.ps1 | iex
+npm install -g @anthropic-ai/claude-code
 ```
 
 ---
