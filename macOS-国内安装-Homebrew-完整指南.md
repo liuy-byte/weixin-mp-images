@@ -1,77 +1,60 @@
 # macOS 国内安装 Homebrew 完整指南
 
-Homebrew 是 macOS 上最流行的包管理器，通过它可以方便地安装各种开发工具和软件。然而，由于网络原因，从官方源安装 Homebrew 往往非常缓慢甚至超时。本文将介绍如何使用国内镜像源快速安装 Homebrew。
+国内使用镜像源快速安装 Homebrew，解决官方源速度慢、超时等问题。
 
 ---
 
-## 一、为什么需要国内镜像
+## 一、安装前准备
 
-Homebrew 的官方服务器位于国外，国内用户访问时经常遇到以下问题：
-
-- **下载速度慢**：官方源下载速度通常只有几十 KB/s
-- **连接超时**：频繁出现网络超时错误
-- **安装中断**：大文件下载过程中容易失败
-
-使用国内镜像源（如清华大学镜像源）可以有效解决这些问题，下载速度通常可以达到几 MB/s。
-
----
-
-## 二、安装前准备
-
-### 1. 系统要求
-
-- macOS Catalina (10.15) 或更高版本
-- 至少 2GB 可用磁盘空间
-- 管理员权限
-
-### 2. 安装 Command Line Tools
-
-在安装 Homebrew 之前，需要先安装 Xcode Command Line Tools：
+### 1. 检查是否已安装 Xcode Command Line Tools
 
 ```bash
-# 检查是否已安装
 xcode-select -p
+```
 
-# 如果没有输出，执行以下命令安装
+如果输出路径（如 `/Library/Developer/CommandLineTools`），说明已安装，可跳过安装步骤。
+
+### 2. 安装 Xcode Command Line Tools
+
+如果未安装，执行：
+
+```bash
 xcode-select --install
 ```
 
-> 💡 安装 Command Line Tools 时会弹出安装对话框，按照提示完成即可。
+---
+
+## 二、安装步骤
+
+### 方式一：一键安装（推荐）
+
+```bash
+/bin/bash -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+
+脚本会自动检测系统架构，安装过程中可选择镜像源（清华/中科大/阿里云）。
 
 ---
 
-## 三、安装步骤（清华大学镜像源）
+### 方式二：手动安装（清华镜像）
 
-### 1. 设置环境变量
-
-在终端中执行以下命令，设置 Homebrew 的安装源为清华大学镜像：
+**1. 设置环境变量**
 
 ```bash
-# 设置环境变量
-export HOMEBREW_INSTALL_FROM_API=1
-
-# 临时设置 Git 镜像
 export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/homebrew-core.git"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/brew.git"
 ```
 
-### 2. 执行安装命令
+**2. 执行安装**
 
 ```bash
-# 使用官方安装脚本（会自动使用设置的镜像源）
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-> **注意**：由于网络原因，如果第一次安装失败，可以多尝试几次。
-
-### 3. 验证安装
-
-安装完成后，按照提示执行以下命令添加到 PATH：
+**3. 配置 PATH**
 
 ```bash
-# Apple Silicon Mac (M1/M2/M3)
+# Apple Silicon Mac（M1/M2/M3/M4）
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -80,7 +63,7 @@ echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
 ```
 
-验证安装是否成功：
+**验证安装：**
 
 ```bash
 brew --version
@@ -88,41 +71,26 @@ brew --version
 
 ---
 
-## 四、永久配置国内镜像
+## 三、永久配置镜像源
 
-为了确保每次使用 Homebrew 时都走国内镜像，需要将环境变量添加到配置文件中。
-
-### 1. 对于 zsh 用户（macOS 默认）
+> 一键安装已自动配置，手动安装需执行以下步骤：
 
 ```bash
-# 编辑 ~/.zshrc 文件
+# 编辑配置文件
 nano ~/.zshrc
 
 # 添加以下内容
 export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/homebrew-core.git"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/brew.git"
 
-# 保存后生效
+# 保存后执行
 source ~/.zshrc
-```
-
-### 2. 对于 bash 用户
-
-```bash
-# 编辑 ~/.bash_profile 文件
-nano ~/.bash_profile
-
-# 添加相同的环境变量
-
-# 保存后生效
-source ~/.bash_profile
+brew update
 ```
 
 ---
 
-## 五、常用命令速查表
+## 四、常用命令
 
 | 命令 | 说明 |
 |-----|------|
@@ -137,85 +105,34 @@ source ~/.bash_profile
 
 ---
 
-## 六、常见问题
+## 五、常见问题
 
-### 1. 安装失败，提示 "Connection refused"
-
-**解决方法**：
-- 检查网络连接
-- 尝试切换网络（如手机热点）
-- 多次尝试安装命令
-
-### 2. 提示 "Permission denied" 权限错误
-
-**解决方法**：
+**brew command not found**
 ```bash
-# 确保 /usr/local 目录权限正确
-sudo chown -R $(whoami) /usr/local
+source ~/.zshrc
+```
 
-# 或者对于 Homebrew 目录
+**权限错误**
+```bash
 sudo chown -R $(whoami) $(brew --prefix)
 ```
 
-### 3. Command Line Tools 安装失败
-
-**解决方法**：
-- 手动下载安装：访问 https://developer.apple.com/download/all/
-- 搜索 "Command Line Tools" 并下载对应版本
-
-### 4. brew command not found
-
-**解决方法**：
-- 确认已执行添加到 PATH 的命令
-- 重启终端或执行 `source ~/.zshrc`
-
-### 5. 镜像源失效或无法连接
-
-**解决方法**：
-- 检查环境变量配置是否正确
-- 尝试使用其他镜像源（如中科大镜像源）
-- 查看镜像源官方状态页面
-
----
-
-## 七、卸载 Homebrew
-
-如果需要卸载 Homebrew，可以使用官方提供的卸载脚本：
-
-```bash
-# 下载并执行卸载脚本
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
-```
-
-> **注意**：卸载前请确保已备份重要数据。
-
----
-
-## 八、其他国内镜像源（备选）
-
-### 中科大镜像源
-
-```bash
-export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-```
-
-### 阿里云镜像源
-
-```bash
-export HOMEBREW_API_DOMAIN="https://mirrors.aliyun.com/homebrew-bottles/api"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.aliyun.com/homebrew-bottles"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.aliyun.com/homebrew-core.git"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.aliyun.com/brew.git"
-```
+**Command Line Tools 安装失败**
+访问 Apple 开发者下载页面手动下载：
+https://developer.apple.com/download/all/
 
 ---
 
 ## 相关链接
 
-- [Homebrew 官方网站](https://brew.sh/)
-- [Homebrew 官方仓库](https://github.com/Homebrew/brew)
-- [清华大学 Homebrew 镜像源](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew-bottles/)
-- [中科大 Homebrew 镜像源](https://mirrors.ustc.edu.cn/help/homebrew-bottles/)
+**Homebrew 官方**
+- 官网：https://brew.sh/
+- 官方仓库：https://github.com/Homebrew/brew
+
+**一键安装脚本**
+- HomebrewCN：https://gitee.com/cunkai/HomebrewCN
+
+**国内镜像源**
+- 清华镜像：https://mirrors.tuna.tsinghua.edu.cn/help/homebrew-bottles/
+- 中科大镜像：https://mirrors.ustc.edu.cn/
+- 阿里云镜像：https://developer.aliyun.com/mirror/homebrew/
