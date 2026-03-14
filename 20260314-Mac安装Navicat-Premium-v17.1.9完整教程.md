@@ -8,7 +8,7 @@
 
 双击打开下载的 `.dmg` 安装包，将左侧 Navicat Premium.app 拖入右侧 Applications 文件夹。
 
-![拖入安装](https://raw.githubusercontent.com/liuy-byte/weixin-mp/main/images/navicat-mac-install/drag-to-install.png)
+![拖入安装](https://raw.githubusercontent.com/liuy-byte/weixin-mp-images/main/images/navicat-mac-install/drag-to-install.png)
 
 ---
 
@@ -22,7 +22,7 @@
 
 打开 **设置 → 隐私与安全性 → 安全性**，看是否有"任何来源"选项。
 
-![安全性设置](https://raw.githubusercontent.com/liuy-byte/weixin-mp/main/images/navicat-mac-install/security-settings.png)
+![安全性设置](https://raw.githubusercontent.com/liuy-byte/weixin-mp-images/main/images/navicat-mac-install/security-settings.png)
 
 ### 2. 没有"任何来源"？终端执行两条命令
 

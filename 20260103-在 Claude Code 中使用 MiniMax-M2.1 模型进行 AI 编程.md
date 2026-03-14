@@ -120,4 +120,4 @@ https://platform.minimaxi.com/docs/coding-plan/mcp-guide
 🌐 MiniMax 官网（获取 API Key）
 https://minimaxi.com
 
-![Coding Plan](https://raw.githubusercontent.com/liuy-byte/weixin-mp/main/images/IMG_8137.jpg)
+![Coding Plan](https://raw.githubusercontent.com/liuy-byte/weixin-mp-images/main/images/IMG_8137.jpg)
