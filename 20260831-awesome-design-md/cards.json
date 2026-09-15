@@ -1,0 +1,145 @@
+[
+  {
+    "file": "01-cover",
+    "kicker": "AI 编程 · AWESOME DESIGN.MD",
+    "title": "<hl>11万 Star</hl><br>给 AI 一份设计规范",
+    "sub": "不再靠一句“做成 Linear 风”碰运气",
+    "center": true,
+    "term": [
+      "# 项目根目录",
+      "DESIGN.md",
+      "✓ 色板 · 字体 · 组件 · 布局"
+    ],
+    "chips": [
+      "74 份开源文档",
+      "MIT"
+    ]
+  },
+  {
+    "file": "02-why-design-md",
+    "kicker": "为什么 AI 页面总有模板味",
+    "title": "AI 会写页面<br>但它<hl>不会读心</hl>",
+    "term": [
+      "> 做成 Linear 风",
+      "# 没有明确规则，AI 只能猜",
+      "✓ DESIGN.md 把风格写明白"
+    ],
+    "cols": [
+      {
+        "t": "AGENTS.md",
+        "b": "项目怎么搭、代码怎么写"
+      },
+      {
+        "t": "DESIGN.md",
+        "b": "页面该长什么样、哪些不能乱来"
+      }
+    ],
+    "note": "它给 AI 的是设计依据，不是又一段模糊 prompt。"
+  },
+  {
+    "file": "03-repo-facts",
+    "kicker": "仓库实查 · 2026-08-31",
+    "title": "这个仓库<br>到底装了什么",
+    "stats": [
+      {
+        "v": "11.2万",
+        "l": "GitHub Star"
+      },
+      {
+        "v": "74份",
+        "l": "DESIGN.md"
+      },
+      {
+        "v": "2026年",
+        "l": "仓库创建"
+      },
+      {
+        "v": "MIT",
+        "l": "仓库许可"
+      }
+    ],
+    "note": "源码树已经有 74 份，README 徽章还停在 73。Star 会继续变化。"
+  },
+  {
+    "file": "04-whats-inside",
+    "kicker": "不只是几个色值",
+    "title": "一份文档<br>把<hl>设计决定</hl>写细",
+    "term": [
+      "primary: #533afd",
+      "display: Sohne / 300",
+      "display-xxl: 56px / 1.03",
+      "pill: 9999px"
+    ],
+    "list": [
+      "布局、间距和留白怎么控制",
+      "按钮、卡片、输入框各是什么状态",
+      "Do's / Don'ts 直接写清设计禁区",
+      "响应式变化也有明确规则"
+    ],
+    "note": "上面的参数来自仓库里的 Stripe 示例。"
+  },
+  {
+    "file": "05-designs",
+    "kicker": "按产品气质挑，不要盲目抄",
+    "title": "不只 Linear<br>这些风格都能挑",
+    "cols": [
+      {
+        "t": "开发者工具",
+        "b": "Cursor、Vercel、Warp、Raycast"
+      },
+      {
+        "t": "SaaS 与效率工具",
+        "b": "Linear、Notion、Cal.com、Intercom"
+      },
+      {
+        "t": "品牌与复古网页",
+        "b": "Apple、Nike、Spotify、Dell 1996、Nintendo 2001"
+      }
+    ],
+    "note": "这些是基于公开页面做的独立分析，不是各品牌官方设计系统。"
+  },
+  {
+    "file": "06-how-to-use",
+    "kicker": "三步跑起来",
+    "title": "把规范放进去<br>再让 AI <hl>动手</hl>",
+    "term": [
+      "DESIGN.md -> 项目根目录",
+      "> 严格按它实现这个页面",
+      "✓ 先做一页，截图再调"
+    ],
+    "list": [
+      "选一个与你产品气质接近的风格",
+      "让 Codex、Claude Code 或 Cursor 先读文件",
+      "看真实页面，不合适就改 DESIGN.md"
+    ],
+    "note": "Linear 当前目录：design-md/linear.app/"
+  },
+  {
+    "file": "07-use-cases",
+    "kicker": "我的使用建议",
+    "title": "这 4 类项目<br>更适合<hl>先试</hl>",
+    "list": [
+      "Side project / 内部工具：先兜住页面下限",
+      "黑客松 / Demo / MVP：借成熟规则快速出样",
+      "没有设计师的小团队：先统一，再做自己的品牌",
+      "长期产品：新页面不容易越写越散"
+    ],
+    "note": "它主要抬高设计下限，不能替代产品判断和视觉验收。"
+  },
+  {
+    "file": "08-limits",
+    "kicker": "好用，但别照单全收",
+    "title": "借设计语言<br>别把<hl>品牌也搬走</hl>",
+    "term": [
+      "# 不是官方设计系统",
+      "# 商业字体可能缺失",
+      "# 不保证像素级还原"
+    ],
+    "list": [
+      "先看 fallback，别让缺字体拖垮页面",
+      "别复制 Logo、文案和图片素材",
+      "老项目先试一页，不要整站硬套"
+    ],
+    "note": "MIT 是仓库许可；第三方商标和素材仍归各自权利人。"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "file": "01-chatgpt-reconnect-5of5",
+    "kicker": "CHATGPT 桌面版 · MACOS",
+    "title": "新会话总在<br><hl>重连 5/5</hl>？",
+    "sub": "第一条消息失败，继续提问却正常",
+    "term": [
+      "# ~/.codex/config.toml",
+      "[features]",
+      "respect_system_proxy = true"
+    ],
+    "list": [
+      "已有 [features]：<hl>只加配置项</hl>",
+      "保存后按 <hl>⌘Q 完全退出</hl>",
+      "重新打开 ChatGPT 桌面版"
+    ],
+    "note": "作用：让首次 WebSocket 连接遵循 macOS 系统代理。"
+  }
+]
