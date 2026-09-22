@@ -1,0 +1,135 @@
+[
+  {
+    "file": "01-cover",
+    "kicker": "AI 编程 · 桌面工作台",
+    "title": "不想盯着终端<br>写代码？",
+    "sub": "ccgui 把 10 个 AI 编程 CLI 放进一个窗口",
+    "center": true,
+    "term": [
+      "Claude Code · Codex CLI",
+      "OpenCode · Kimi CLI · 更多",
+      "✓ 对话 · 文件 · 工具调用 · Git"
+    ],
+    "chips": [
+      "开源",
+      "跨平台",
+      "v1.0.5"
+    ]
+  },
+  {
+    "file": "02-what-it-is",
+    "kicker": "先看懂它的定位",
+    "title": "底层还是 CLI<br>前面多了一个<hl>工作台</hl>",
+    "cols": [
+      {
+        "t": "底层运行时",
+        "b": "负责理解任务<br>读写代码、调用工具"
+      },
+      {
+        "t": "ccgui",
+        "b": "负责组织项目、会话<br>文件、终端和 Git"
+      }
+    ],
+    "note": "它不是新的模型，也不会替你绕过各家 CLI 的登录和配置。"
+  },
+  {
+    "file": "03-engines",
+    "kicker": "官方仓库当前列出 10 个运行时",
+    "title": "切换 <hl>10 个引擎</hl>",
+    "cols": [
+      {
+        "t": "主流 CLI",
+        "b": "Claude Code<br>Codex CLI<br>OpenCode"
+      },
+      {
+        "t": "更多选择",
+        "b": "Kimi · Grok<br>Pi · OMP"
+      },
+      {
+        "t": "其他运行时",
+        "b": "DeepSeek Harness<br>Antigravity · Qoder"
+      }
+    ],
+    "note": "每个会话可以单独选择引擎；实际可用模型取决于对应 CLI 和渠道配置。"
+  },
+  {
+    "file": "04-workflow",
+    "kicker": "一条完整的开发路径",
+    "title": "从打开项目<br>一路走到<hl>Git 提交</hl>",
+    "term": [
+      "1. 添加项目文件夹",
+      "2. 选择引擎并描述任务",
+      "3. 查看文件修改和工具调用",
+      "4. 检查 Diff，再暂存和提交"
+    ],
+    "note": "少切几个窗口，重点是把每一步看清楚。"
+  },
+  {
+    "file": "05-visible-process",
+    "kicker": "GUI 最有用的地方",
+    "title": "运行过程<br>不再埋在<hl>终端滚屏</hl>里",
+    "list": [
+      "流式展示回复与运行状态",
+      "工具调用可展开查看参数和结果",
+      "Git Diff 与 Bash 输出单独美化",
+      "引擎上报时显示 token 用量"
+    ],
+    "note": "展示多少信息取决于底层运行时实际提供了什么。"
+  },
+  {
+    "file": "06-panels",
+    "kicker": "不只是一个聊天框",
+    "title": "常用开发面板<br><hl>都放在旁边</hl>",
+    "cols": [
+      {
+        "t": "文件",
+        "b": "文件树、Git 状态<br>编辑器、Markdown 预览"
+      },
+      {
+        "t": "终端",
+        "b": "内置真实终端<br>需要时仍能直接敲命令"
+      },
+      {
+        "t": "Git",
+        "b": "查看 Diff、暂存<br>提交、分支和历史"
+      }
+    ],
+    "note": "GUI 没有删掉终端，而是把终端放回可见的工作流里。"
+  },
+  {
+    "file": "07-platforms",
+    "kicker": "GitHub 实查 · 2026-09-22",
+    "title": "Mac、Windows、Linux<br><hl>都有安装包</hl>",
+    "stats": [
+      {
+        "v": "v1.0.5",
+        "l": "当前最新版本"
+      },
+      {
+        "v": "4285",
+        "l": "GitHub Star"
+      },
+      {
+        "v": "3",
+        "l": "桌面平台"
+      },
+      {
+        "v": "Tauri 2",
+        "l": "桌面技术栈"
+      }
+    ],
+    "note": "Star 和版本会继续变化，下载前以 Releases 页面为准。"
+  },
+  {
+    "file": "08-boundaries",
+    "kicker": "适合谁，也要看清边界",
+    "title": "喜欢 GUI 可以试<br>但别把<hl>确认步骤</hl>省掉",
+    "list": [
+      "适合：不想维护一排终端窗口的人",
+      "适合：需要在多个 AI 编程 CLI 之间切换的人",
+      "仍需：配置对应 CLI、账号和 Provider",
+      "仍要：检查文件写入、命令执行和 Git Diff"
+    ],
+    "note": "界面更直观，不等于操作天然安全；提交前仍要自己把关。"
+  }
+]

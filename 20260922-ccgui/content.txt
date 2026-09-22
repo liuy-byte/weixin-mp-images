@@ -1,0 +1,9 @@
+命令行里的 AI 编程工具很强，但项目和会话一多，终端窗口也会跟着越开越多。
+
+ccgui 保留 Claude Code、Codex CLI、OpenCode 等工具作为底层运行时，在上面加了一套桌面工作台。选项目、发任务、看文件修改、检查 Git Diff，最后暂存和提交，都可以留在同一个界面里完成。
+
+它不是新的模型，也不等于免配置。对应 CLI、账号、Provider 和权限仍要按各自规则设置，文件写入、命令执行和 Git 提交也要自己确认。
+
+截至 2026 年 9 月 22 日，官方仓库列出了 10 个运行时，最新版本为 v1.0.5，支持 macOS、Windows 和 Linux。
+
+仓库：https://github.com/zhukunpenglinyutong/desktop-cc-gui
