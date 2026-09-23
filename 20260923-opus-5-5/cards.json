@@ -1,0 +1,122 @@
+[
+  {
+    "file": "01-cover",
+    "kicker": "AI 编程 · 新模型",
+    "title": "Claude Opus 5.5<br>更新了什么？",
+    "sub": "更便宜、更快，跑分还压过了 Fable 5.1",
+    "center": true,
+    "term": [
+      "> model: claude-opus-5-5",
+      "✓ 9 月 22 日发布",
+      "✓ 1M 上下文 · 128K 输出"
+    ],
+    "chips": [
+      "降价",
+      "提速",
+      "API 有变化"
+    ]
+  },
+  {
+    "file": "02-price",
+    "kicker": "先看最实在的",
+    "title": "单价降两成<br>官方说<hl>整体省 40%</hl>",
+    "stats": [
+      {
+        "v": "$4",
+        "l": "输入 / 百万 token<br>Opus 5 是 $5"
+      },
+      {
+        "v": "$20",
+        "l": "输出 / 百万 token<br>Opus 5 是 $25"
+      },
+      {
+        "v": "30%+",
+        "l": "输出速度提升"
+      },
+      {
+        "v": "40%",
+        "l": "典型任务成本下降"
+      }
+    ],
+    "note": "40% 是官方按默认设置、典型任务测的。单价只降了 20%，另一部分应该来自默认思考档位调低。"
+  },
+  {
+    "file": "03-bench",
+    "kicker": "官方跑分",
+    "title": "写代码、干办公活<br>都跑赢了 <hl>Fable 5.1</hl>",
+    "term": [
+      "# Opus 5.5 / Fable 5.1 / Opus 5",
+      "> Terminal-Bench 4.0",
+      "✓ 66.4%  /  55.8%  /  52.3%",
+      "> CursorBench 4.0",
+      "✓ 57.8%  /  51.8%  /  46.6%",
+      "> GDPval-AA（办公任务）",
+      "✓ 1846   /  1735   /  1708"
+    ],
+    "note": "都是 Anthropic 自己公布的成绩，Opus 5.5 用的是最高思考档位。自己的项目还是要实测。"
+  },
+  {
+    "file": "04-voice",
+    "kicker": "用起来最先感觉到的变化",
+    "title": "说话<hl>更像人</hl>了",
+    "list": [
+      "少用行话和绕弯的说法",
+      "重要结论放在回复开头",
+      "代码注释更短，不写成大段散文",
+      "官方说写出来的东西更好读"
+    ],
+    "note": "以前嫌 Opus 回复太啰嗦的，这次可以再试试。"
+  },
+  {
+    "file": "05-api-changes",
+    "kicker": "调 API 的开发者注意",
+    "title": "从 Opus 5 换过来<br>有 <hl>4 处会报错</hl>",
+    "list": [
+      "思考关不掉了，只能调思考档位（effort）",
+      "默认档位从 high 降到 medium",
+      "强制指定工具的写法直接报错",
+      "电脑操作只认新的工具集"
+    ],
+    "note": "旧代码里写了关思考或 budget_tokens 的，换模型前先删掉。要效果稳，effort 显式写上。"
+  },
+  {
+    "file": "06-subscription",
+    "kicker": "订阅用户和 Claude Code",
+    "title": "额度变多<br>还有 <hl>2.5 倍速</hl>模式",
+    "cols": [
+      {
+        "t": "额度",
+        "b": "Pro、Max、Team<br>企业席位的 5 小时<br>用量上限都提高了"
+      },
+      {
+        "t": "快速模式",
+        "b": "Claude Code 里可开<br>最高 2.5 倍速度<br>API 价格 $8 / $40"
+      }
+    ],
+    "note": "快速模式按双倍单价计费，赶时间再开。"
+  },
+  {
+    "file": "07-safety",
+    "kicker": "安全这块也有变化",
+    "title": "越界尝试<br><hl>少了约 85%</hl>",
+    "list": [
+      "试图绕开限制的次数，比 Opus 5 少约 85%",
+      "多数网络安全类任务会转给 Opus 4.8 处理",
+      "日常开发里找 bug、修 bug 不受影响",
+      "发布前交给 METR 等外部机构评测过"
+    ],
+    "note": "做安全研究的读者，可能会遇到请求被转走的情况。"
+  },
+  {
+    "file": "08-next",
+    "kicker": "要不要换",
+    "title": "在用 Opus 5 的<br><hl>值得换过来</hl>",
+    "list": [
+      "订阅用户：Claude.ai 和 Claude Code 已能选",
+      "API 用户：改名 claude-opus-5-5，先对照第 5 张",
+      "云平台：AWS、Google Cloud、Azure 都已上线",
+      "Sonnet 5.5 和 Haiku 5.5 还要等几周"
+    ],
+    "note": "资料来自 Anthropic 官方发布页，截至 2026-09-23。"
+  }
+]
