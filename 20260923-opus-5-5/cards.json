@@ -56,7 +56,31 @@
     "note": "都是 Anthropic 自己公布的成绩，Opus 5.5 用的是最高思考档位。自己的项目还是要实测。"
   },
   {
-    "file": "04-voice",
+    "file": "04-capability",
+    "kicker": "官方跑分 · 不只是写代码",
+    "title": "电脑操作和自动化<br>也<hl>明显变强</hl>",
+    "stats": [
+      {
+        "v": "40.0%",
+        "l": "AutomationBench<br>自动化任务<br>Opus 5 是 26.9%"
+      },
+      {
+        "v": "81.8%",
+        "l": "OSWorld 2.0 操作电脑<br>按部分完成计分"
+      },
+      {
+        "v": "54.4%",
+        "l": "FrontierCode 编程<br>Fable 5.1 是 50.3%"
+      },
+      {
+        "v": "67.7%",
+        "l": "Humanity's Last Exam<br>允许使用工具"
+      }
+    ],
+    "note": "OSWorld 和 Humanity's Last Exam 官方没列前代对比，这里只放 Opus 5.5 自己的成绩。"
+  },
+  {
+    "file": "05-voice",
     "kicker": "用起来最先感觉到的变化",
     "title": "说话<hl>更像人</hl>了",
     "list": [
@@ -68,7 +92,7 @@
     "note": "以前嫌 Opus 回复太啰嗦的，这次可以再试试。"
   },
   {
-    "file": "05-api-changes",
+    "file": "06-api-changes",
     "kicker": "调 API 的开发者注意",
     "title": "从 Opus 5 换过来<br>有 <hl>4 处会报错</hl>",
     "list": [
@@ -80,7 +104,7 @@
     "note": "旧代码里写了关思考或 budget_tokens 的，换模型前先删掉。要效果稳，effort 显式写上。"
   },
   {
-    "file": "06-subscription",
+    "file": "07-subscription",
     "kicker": "订阅用户和 Claude Code",
     "title": "额度变多<br>还有 <hl>2.5 倍速</hl>模式",
     "cols": [
@@ -96,7 +120,7 @@
     "note": "快速模式按双倍单价计费，赶时间再开。"
   },
   {
-    "file": "07-safety",
+    "file": "08-safety",
     "kicker": "安全这块也有变化",
     "title": "越界尝试<br><hl>少了约 85%</hl>",
     "list": [
@@ -108,12 +132,12 @@
     "note": "做安全研究的读者，可能会遇到请求被转走的情况。"
   },
   {
-    "file": "08-next",
+    "file": "09-next",
     "kicker": "要不要换",
     "title": "在用 Opus 5 的<br><hl>值得换过来</hl>",
     "list": [
       "订阅用户：Claude.ai 和 Claude Code 已能选",
-      "API 用户：改名 claude-opus-5-5，先对照第 5 张",
+      "API 用户：改名 claude-opus-5-5，先对照第 6 张",
       "云平台：AWS、Google Cloud、Azure 都已上线",
       "Sonnet 5.5 和 Haiku 5.5 还要等几周"
     ],
