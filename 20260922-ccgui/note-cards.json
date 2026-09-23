@@ -1,0 +1,109 @@
+{
+  "brand": "技术洋",
+  "theme": { "accent": "#0668E1", "style": "note" },
+  "cards": [
+    {
+      "file": "note-01-cover",
+      "layout": "hero",
+      "tone": "paper",
+      "eyebrow": "AI 编程 · 桌面工作台",
+      "title": "不想盯着<hl>终端</hl><br>写代码？",
+      "summary": "试试 ccgui：项目、会话、文件修改和 Git Diff 放在一个窗口里看。",
+      "image": { "src": "note-illustration.svg", "fit": "contain" },
+      "tags": ["Claude Code", "Codex CLI", "OpenCode"]
+    },
+    {
+      "file": "note-02-what-it-is",
+      "layout": "comparison",
+      "tone": "paper",
+      "eyebrow": "先看懂它的定位",
+      "title": "底层还是 CLI<br>前面多了个<hl>工作台</hl>",
+      "sides": [
+        { "title": "底层运行时", "body": "理解任务、读写代码\n执行工具调用" },
+        { "title": "ccgui", "body": "组织项目与会话\n展示文件、终端和 Git" }
+      ],
+      "note": "它不是新的模型；登录、Provider 和权限仍需按各家 CLI 配置。"
+    },
+    {
+      "file": "note-03-engines",
+      "layout": "list",
+      "tone": "paper",
+      "eyebrow": "官方仓库 · 截至 2026-09-22",
+      "title": "一个工作台<br>切换 <hl>10 个运行时</hl>",
+      "items": [
+        { "title": "常见选择", "body": "Claude Code · Codex CLI · OpenCode" },
+        { "title": "更多 CLI", "body": "Kimi · Grok · Pi · OMP" },
+        { "title": "其他运行时", "body": "DeepSeek Harness · Antigravity · Qoder" }
+      ],
+      "note": "实际可用模型仍取决于各运行时及账号配置。"
+    },
+    {
+      "file": "note-04-workflow",
+      "layout": "steps",
+      "tone": "paper",
+      "eyebrow": "一条完整的开发路径",
+      "title": "从打开项目<br>走到<hl>检查提交</hl>",
+      "steps": [
+        { "title": "添加项目", "body": "选好工作文件夹，先看当前上下文。" },
+        { "title": "选择引擎", "body": "选对应 CLI，再描述这次任务。" },
+        { "title": "查看过程", "body": "跟着文件修改和工具调用往下看。" },
+        { "title": "检查 Diff", "body": "确认改动后，再决定暂存与提交。" }
+      ],
+      "note": "把每一步放在眼前，仍要自己判断结果。"
+    },
+    {
+      "file": "note-05-visible-process",
+      "layout": "list",
+      "tone": "ink",
+      "eyebrow": "GUI 最有用的地方",
+      "title": "运行过程<br>不再埋进<hl>滚屏</hl>里",
+      "items": [
+        { "title": "回复与状态", "body": "流式显示，知道当前走到哪一步。" },
+        { "title": "工具调用", "body": "展开查看参数和执行结果。" },
+        { "title": "代码与命令", "body": "Git Diff 和 Bash 输出单独呈现。" },
+        { "title": "用量信息", "body": "运行时上报时才会显示 token 用量。" }
+      ],
+      "note": "显示多少，取决于底层运行时提供的信息。"
+    },
+    {
+      "file": "note-06-panels",
+      "layout": "list",
+      "tone": "paper",
+      "eyebrow": "不只是聊天框",
+      "title": "写代码要看的<br><hl>三个面板</hl>都在旁边",
+      "items": [
+        { "title": "文件", "body": "文件树、Git 状态、编辑器和 Markdown 预览。" },
+        { "title": "终端", "body": "内置真实终端，需要时仍可直接敲命令。" },
+        { "title": "Git", "body": "查看 Diff、暂存、提交、分支与历史。" }
+      ],
+      "note": "终端没有消失，只是回到了看得见的工作流里。"
+    },
+    {
+      "file": "note-07-platforms",
+      "layout": "metrics",
+      "tone": "paper",
+      "eyebrow": "GitHub 仓库 · 截至 2026-09-22",
+      "title": "三个桌面平台<br><hl>都能安装</hl>",
+      "metrics": [
+        { "value": "03", "label": "macOS · Windows · Linux" },
+        { "value": "v1.0.5", "label": "当时的最新版本" },
+        { "value": "Tauri 2", "label": "桌面技术栈" }
+      ],
+      "note": "版本会更新，下载前以仓库 Releases 页面为准。"
+    },
+    {
+      "file": "note-08-boundaries",
+      "layout": "list",
+      "tone": "accent",
+      "eyebrow": "适合谁，也要看清边界",
+      "title": "喜欢 GUI 可以试<br>但别省掉<hl>确认</hl>",
+      "items": [
+        { "title": "适合", "body": "不想维护一排终端窗口的人。" },
+        { "title": "也适合", "body": "需要在多个 AI 编程 CLI 之间切换的人。" },
+        { "title": "仍要配置", "body": "对应 CLI、账号、Provider 和权限。" },
+        { "title": "仍要检查", "body": "文件写入、命令执行与 Git Diff。" }
+      ],
+      "note": "界面更直观，不等于操作天然安全；提交前仍要自己把关。"
+    }
+  ]
+}
